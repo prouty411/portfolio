@@ -27,6 +27,7 @@ p {
     line-height:24px;
     font-weight:300;
     margin-bottom:20px;
+    margin-top: 40px;
 }
 
 .lead {
@@ -88,7 +89,7 @@ a:focus,
 }
 
 .padding-top {
-    padding:100px 0 0;
+    padding:75px 0 0;
 }
 
 .navbar {
@@ -286,6 +287,10 @@ a:focus,
 
 #main-nav.scrolled .nav a{
     color:inherit; 
+}
+
+.skillSection{
+    margin-bottom: 82px !important;
 }
 
 #main-nav li{
@@ -1142,11 +1147,20 @@ a:focus,
     margin-left:3px;
 }
 
+.name-email-field{
+    width: 20%;
+}
+
+.message-field{
+    width: 70%;
+    margin-bottom: 80px;
+}
+
 #contact-form .field-wrap{
     display:inline-block;
     position:relative;
     vertical-align:top;
-    margin-bottom:60px;
+    margin-bottom:25px;
 }
 
 #contact-form .field-wrap .error-message{
@@ -1357,10 +1371,55 @@ a:focus,
 	-ms-transform: translateY(0px);
 	transform:translateY(0px);
 }
+.mealsformePicture{
+    width: 320px;
+    height: 149px;
+}
+
+/* .messageField{
+    width: 300px !important;
+} */
+
+
+.liveLink{
+    margin-right: 5%;
+}
+
+.bl_form textarea{
+    max-width: none !important;
+    max-height: 290px !important;
+    width: 325px !important;
+}
 
 /*----------------------
 -----Media Queries------
 ------------------------*/    
+@media only screen and (max-width: 675px){
+    #contact-form .field-wrap{
+        width: 100%;
+    }
+    .bl_form input {
+        min-width: 350px;
+    }
+    
+    .bl_form textarea{
+        min-width: 350px;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px){
+   .name-email-field{
+        width: 25%;
+   }
+}
+
+@media only screen and (max-width: 990px){
+    .name-email-field{
+         width: 33%;
+    }
+ }
+
 @media (max-width: 767px) {
 	
     .navbar {
