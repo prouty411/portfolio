@@ -1155,6 +1155,9 @@ a:focus,
     width: 70%;
     margin-bottom: 80px;
 }
+.message-field::placeholder{
+    text-align: center;
+}
 
 #contact-form .field-wrap{
     display:inline-block;
@@ -1386,9 +1389,17 @@ a:focus,
 }
 
 .bl_form textarea{
-    max-width: none !important;
-    max-height: 290px !important;
-    width: 325px !important;
+    max-width: 435px;
+    min-width:435px;
+    max-height: 200px;
+    min-height: 200px;
+    width: 435px;
+    height: 200px;
+    margin-top: 10px;
+    
+}
+::-webkit-input-placeholder { /* Webkit */
+    text-align: center;
 }
 
 /*----------------------
@@ -1400,10 +1411,16 @@ a:focus,
     }
     .bl_form input {
         min-width: 350px;
+        width: 350px;
+        margin-top: 8px;
+        margin-bottom: 5px;
     }
     
     .bl_form textarea{
         min-width: 350px;
+        max-width: 350px;
+        width: 350px;
+
     }
     
 }

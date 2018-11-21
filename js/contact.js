@@ -53,6 +53,12 @@ $(document).ready(function() {
 			var online = navigator.onLine;
 			if(!online){
 				$('#contact-form button').html('<i class="fa fa-times"></i>'+networkError);
+
+				setTimeout(function(){
+					$('#contact-form button').html(buttonCopy);
+					$('#contact-form button').width('auto');
+					$('#contact-form').removeClass('clicked');
+				},2000);
 			}
 			var formInput = $(this).serialize();
 			$.post($(this).attr('action'),formInput, function(data){
