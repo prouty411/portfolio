@@ -27,6 +27,7 @@ p {
     line-height:24px;
     font-weight:300;
     margin-bottom:20px;
+    margin-top: 40px;
 }
 
 .lead {
@@ -88,7 +89,7 @@ a:focus,
 }
 
 .padding-top {
-    padding:100px 0 0;
+    padding:75px 0 0;
 }
 
 .navbar {
@@ -288,6 +289,10 @@ a:focus,
     color:inherit; 
 }
 
+.skillSection{
+    margin-bottom: 82px !important;
+}
+
 #main-nav li{
     background:transparent;
     margin:0 20px;
@@ -384,7 +389,7 @@ a:focus,
 
 .jumbotron.bg-image {
     position: relative;
-    background:url(../assets/header.jpg) 50% 50% no-repeat;
+    background:url(../assets/background_ocean.jpg); /*50% 50% no-repeat */
     background-size: cover;
 }
 
@@ -535,6 +540,9 @@ a:focus,
 /*----------------------
 -----Services Styles----
 ------------------------*/  
+/* .skillSet{
+    padding-top: 0px; 
+} */
 .services .item {
     text-align:center;
     margin-bottom:30px;
@@ -774,6 +782,7 @@ a:focus,
 
 
 .project-item .hover-mask {
+    text-align: center;
     position:absolute;
     padding:0;
     padding-left:50px;
@@ -795,8 +804,8 @@ a:focus,
 
 .project-item .hover-mask .project-title {
     color:#fff;
-    margin:30px 0 0;
-    padding:10px;
+    margin:0px 0 0;
+    padding:3px;
     font-family:"Titillium Web",sans-serif;
     font-size:21px;
     line-height:24px;
@@ -816,7 +825,7 @@ a:focus,
     -webkit-transition:all 0.3s ease-out;
     transition:all 0.3s ease-out;
 }
-
+/* 
 .project-item .hover-mask:after{
     display:block;
     position:absolute;
@@ -825,7 +834,7 @@ a:focus,
     bottom:20px;
     left:175px;
     color:#fff;
-}
+} */
 
 .masonry,
 .masonry .masonry-brick {
@@ -1138,11 +1147,23 @@ a:focus,
     margin-left:3px;
 }
 
+.name-email-field{
+    width: 20%;
+}
+
+.message-field{
+    width: 70%;
+    margin-bottom: 80px;
+}
+.message-field::placeholder{
+    text-align: center;
+}
+
 #contact-form .field-wrap{
     display:inline-block;
     position:relative;
     vertical-align:top;
-    margin-bottom:60px;
+    margin-bottom:25px;
 }
 
 #contact-form .field-wrap .error-message{
@@ -1353,10 +1374,69 @@ a:focus,
 	-ms-transform: translateY(0px);
 	transform:translateY(0px);
 }
+.mealsformePicture{
+    width: 320px;
+    height: 149px;
+}
+
+/* .messageField{
+    width: 300px !important;
+} */
+
+
+.liveLink{
+    margin-right: 5%;
+}
+
+.bl_form textarea{
+    max-width: 435px;
+    min-width:435px;
+    max-height: 200px;
+    min-height: 200px;
+    width: 435px;
+    height: 200px;
+    margin-top: 10px;
+    
+}
+::-webkit-input-placeholder { /* Webkit */
+    text-align: center;
+}
 
 /*----------------------
 -----Media Queries------
 ------------------------*/    
+@media only screen and (max-width: 675px){
+    #contact-form .field-wrap{
+        width: 100%;
+    }
+    .bl_form input {
+        min-width: 350px;
+        width: 350px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+    
+    .bl_form textarea{
+        min-width: 350px;
+        max-width: 350px;
+        width: 350px;
+
+    }
+    
+}
+
+@media only screen and (max-width: 1200px){
+   .name-email-field{
+        width: 25%;
+   }
+}
+
+@media only screen and (max-width: 990px){
+    .name-email-field{
+         width: 33%;
+    }
+ }
+
 @media (max-width: 767px) {
 	
     .navbar {
