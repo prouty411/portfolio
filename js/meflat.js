@@ -1,8 +1,11 @@
 $(document).ready(function() {
 	
+	
 	/*============================================
 	Navigation Functions
 	==============================================*/
+
+	
 	if ($(window).scrollTop()===0){
 		$('#main-nav').removeClass('scrolled');
 	}
@@ -11,6 +14,9 @@ $(document).ready(function() {
 	}
 
 	$(window).scroll(function(){
+		if ($('.navbar-collapse').hasClass('in')){
+			$('.navbar-collapse').removeClass('in').addClass('collapse');
+		}
 		if ($(window).scrollTop()===0){
 			$('#main-nav').removeClass('scrolled');
 		}
@@ -261,5 +267,6 @@ $(document).ready(function() {
 			$.waypoints('refresh');
 		},1000);
 	}
+
 
 });	

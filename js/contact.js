@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$('#contact-form').submit(function() {
 		
 		if($('#contact-form').hasClass('clicked')){
@@ -13,7 +14,10 @@ $(document).ready(function() {
 			errorMessage = $('#contact-form button').data('error-message'),
 			sendingMessage = $('#contact-form button').data('sending-message'),
 			okMessage = $('#contact-form button').data('ok-message'),
+			networkError = $('#contact-form button').data('network-message'),
 			hasError = false;
+
+		
 		
 		$('#contact-form button').width(buttonWidth);
 		$('#contact-form .error-message').remove();
@@ -37,6 +41,7 @@ $(document).ready(function() {
 		
 		if(hasError) {
 			$('#contact-form button').html('<i class="fa fa-times"></i>'+errorMessage);
+			
 			setTimeout(function(){
 				$('#contact-form button').html(buttonCopy);
 				$('#contact-form button').width('auto');
@@ -45,7 +50,16 @@ $(document).ready(function() {
 		}
 		else {
 			$('#contact-form button').html('<i class="fa fa-spinner fa-spin"></i>'+sendingMessage);
-			
+			var online = navigator.onLine;
+			if(!online){
+				$('#contact-form button').html('<i class="fa fa-times"></i>'+networkError);
+
+				setTimeout(function(){
+					$('#contact-form button').html(buttonCopy);
+					$('#contact-form button').width('auto');
+					$('#contact-form').removeClass('clicked');
+				},2000);
+			}
 			var formInput = $(this).serialize();
 			$.post($(this).attr('action'),formInput, function(data){
 				$('#contact-form button').html('<i class="fa fa-check"></i>'+okMessage);
